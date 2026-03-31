@@ -54,3 +54,8 @@ header{
   line-height: 100px;
   margin-right: 49px;
 }
+
+.avenger{
+  width: 100%;
+  max-width: 500px;
+}
