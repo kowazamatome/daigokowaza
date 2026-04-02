@@ -26,6 +26,21 @@ header{
   object-fit: cover;
 }
 
+/* タブレット */
+@media (max-width: 900px) {
+  .character-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+  .character-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .character p{
    margin: 0;
   font-size: 16px;
