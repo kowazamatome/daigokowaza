@@ -47,8 +47,10 @@ header{
   font-weight: bold;
   line-height: 100px;
   margin-right: 49px;
+   white-space: nowrap;
 }
 
+/* 動画のサイズ調整 */
 .movie{
   width: 100%;
   max-width: 500px;
