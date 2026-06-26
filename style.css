@@ -1,12 +1,12 @@
-body{
+body {
   background-color: #ccc;
 }
 
-header{
+header {
   background-color: chocolate;
 }
 
-.character{
+.character {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -14,13 +14,14 @@ header{
   text-decoration: none;
 }
 
-.character-list{
+.hunter-list,
+.survivor-list {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-   gap: 15px; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 
-.character img{
+.character img {
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -28,30 +29,40 @@ header{
 
 /* タブレット */
 @media (max-width: 900px) {
-  .character-list {
+  .hunter-list,
+  .survivor-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* スマホ */
 @media (max-width: 600px) {
-  .character-list {
+  .hunter-list,
+  .survivor-list {
     grid-template-columns: 1fr;
   }
 }
 
-
-.character p{
-   margin: 0;
+.character p {
+  margin: 0;
   font-size: 16px;
   font-weight: bold;
   line-height: 100px;
   margin-right: 49px;
-   white-space: nowrap;
+  white-space: nowrap;
 }
 
 /* 動画のサイズ調整 */
-.movie{
+.movie {
   width: 100%;
   max-width: 500px;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.survivor-list {
+  margin-bottom: 30px;
 }
