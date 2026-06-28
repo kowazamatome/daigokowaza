@@ -527,3 +527,17 @@ hunter.innerHTML += characterList(
   '女王蜂の画像',
 );
 // hunter.innerHTML += characterList('', '', '', ''); コピー用
+
+const input = document.querySelector('input');
+
+input.addEventListener('input', () => {
+  const characters = document.querySelectorAll('.character');
+  for (const character of characters) {
+    const name = character.querySelector('p').textContent;
+    if (name.includes(input.value)) {
+      character.style.display = '';
+    } else {
+      character.style.display = 'none';
+    }
+  }
+});
