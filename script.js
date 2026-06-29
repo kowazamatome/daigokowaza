@@ -530,14 +530,24 @@ hunter.innerHTML += characterList(
 
 const input = document.querySelector('input');
 
+const noResult = document.querySelector('#no-result');
+
 input.addEventListener('input', () => {
+  let count = 0;
   const characters = document.querySelectorAll('.character');
   for (const character of characters) {
     const name = character.querySelector('p').textContent;
     if (name.includes(input.value)) {
       character.style.display = '';
+      count++;
     } else {
       character.style.display = 'none';
     }
+  }
+
+  if (count === 0) {
+    noResult.style.display = 'block';
+  } else {
+    noResult.style.display = 'none';
   }
 });
